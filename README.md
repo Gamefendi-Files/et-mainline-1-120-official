@@ -12,4 +12,4 @@ Emekleri İçin Teşekkürler.
 # Gereksinimler
 
 * MySQL Server 8.0
-*Visual Studio 2022 (v141)
+* Visual Studio 2022 (v141)
