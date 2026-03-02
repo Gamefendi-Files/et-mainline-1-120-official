@@ -1,7 +1,7 @@
 # Stiglitz -  Gamefendi.com
 
 #Geçici olarak pack'i yüklemeyelim...
-Client/pack
+#Client/pack
 Database
 
 
@@ -19,12 +19,12 @@ Client/Metin2*.exe
 # Pack'ı unutmadık canım
 # Bütün Klasörleri silelim
 
-#Client/pack/*/
+Client/pack/*/
 
 # Silmemen gerekenler de var tatlım.
-#!Client/pack/*.eix
-#!Client/pack/*.epk
-#!Client/pack/Index
+!Client/pack/*.eix
+!Client/pack/*.epk
+!Client/pack/Index
 
 # Screenshotlar da kalmasın
 Client/screenshot/*
