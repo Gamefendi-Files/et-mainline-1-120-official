@@ -1,0 +1,30 @@
+﻿  buffer.c
+  des.c
+  fdwatch.c
+  gost.c
+  gost_old.c
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libthecore\src\gost_old.c(129,5): warning C5033: 'register' is no longer a supported storage class
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libthecore\src\gost_old.c(185,5): warning C5033: 'register' is no longer a supported storage class
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libthecore\src\gost_old.c(328,5): warning C5033: 'register' is no longer a supported storage class
+  hangul.c
+  heart.c
+  kstbl.c
+  log.c
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libthecore\src\log.c(273,22): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libthecore\src\log.c(331,26): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+  main.c
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libthecore\src\main.c(54,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  memcpy.c
+  signal.c
+  socket.c
+  tea.c
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libthecore\src\socket.c(254,32): warning C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libthecore\src\socket.c(259,12): warning C4996: 'gethostbyname': Use getaddrinfo() or GetAddrInfoW() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+  utils.c
+  xdirent.c
+  xgetopt.c
+  xmd5.c
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libthecore\src\xmd5.c(92,17): warning C4996: 'read': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _read. See online help for details.
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libthecore\src\xmd5.c(96,5): warning C4996: 'close': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _close. See online help for details.
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libthecore\src\xmd5.c(264,5): warning C5033: 'register' is no longer a supported storage class
+  libthecore.2008.vcxproj -> C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libthecore\lib\libthecore.lib

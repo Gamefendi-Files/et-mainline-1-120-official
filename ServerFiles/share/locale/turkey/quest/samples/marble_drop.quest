@@ -1,0 +1,23 @@
+--[[ martysama0134 - sample MARBLE POLY ITEMS from QUEST
+	NOTES:
+		-) it drops the marble specified inside mob_proto.polymorph_vnum if it's not 0
+		-) be sure 70107 is fixed in uitooltip.py
+		-) you need npc.get_type0 in questlua_npc.cpp
+		-) a broken alternative is to add the drop in common_drop_item.txt but many mobs won't drop it this:
+PAWN						S_PAWN						KNIGHT						S_KNIGHT					
+	1	150	100.0	70104	10000		1	150	100.0	70104	7692		1	150	100.0	70104	6667		1	150	100.0	70104	2500
+]]
+quest marble_drop begin
+	state start begin
+		when kill with (not npc.is_pc()) and npc.get_type0()==0 begin
+			-- syschat("marble_drop_kill.kill called")
+			-- syschat("mob vnum ".. npc.get_vnum0())
+			-- syschat("mob type ".. npc.get_type0())
+			-- syschat("mob is_pc ".. (npc.is_pc() and "YES" or "NO"))
+			if number(1,1000) <= 1 then
+				-- syschat("pc.give_poly_marble(".. npc.get_vnum0() ..")")
+				pc.give_poly_marble(npc.get_vnum0())
+			end
+		end
+	end
+end

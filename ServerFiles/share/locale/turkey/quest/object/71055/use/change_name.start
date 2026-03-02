@@ -1,0 +1,73 @@
+if pc . is_married ( ) then 
+say ( gameforge . change_name . error_marriage ) 
+say ( "" ) 
+return 
+end 
+if pc . is_polymorphed ( ) then 
+say ( gameforge . change_name . error_poly ) 
+say ( "" ) 
+return 
+end 
+if pc . has_guild ( ) then 
+say ( gameforge . change_name . error_guild ) 
+say ( "" ) 
+return 
+end 
+if party . is_party ( ) then 
+say ( gameforge . change_name . error_party ) 
+say ( "" ) 
+return 
+end 
+if pc . get_level ( ) < 35 then 
+say ( gameforge . change_name . error_level ) 
+say ( "" ) 
+return 
+end 
+if get_time ( ) < pc . getqf ( "next_time" ) then 
+say ( gameforge . change_name . msg01 ) 
+say ( "" ) 
+if is_test_server ( ) == true then 
+say ( gameforge . change_name . msg02 ) 
+say ( "" ) 
+else 
+return 
+end 
+end 
+say ( gameforge . change_name . msg03 ) 
+local name = pc . name local str = input ( ) 
+say_reward ( str ) 
+local s1 = select ( gameforge . locale . yes , gameforge . locale . no ) 
+if s1 == 2 then return end 
+if string . len ( str ) > 16 then 
+say ( gameforge . change_name . error_longname ) 
+say ( "" ) 
+return 
+end 
+local ret = pc . change_name ( str ) 
+if ret == 0 then 
+say ( gameforge . change_name . error_relogin ) 
+say ( "" ) 
+char_log ( 0 , "CHANGE_NAME" , "HAVE NOT RE-LOGIN" ) 
+elseif ret == 1 then 
+say ( gameforge . change_name . error_reuse ) 
+say ( "" ) 
+char_log ( 0 , "CHANGE_NAME" , "ITEM USE PROBLEM" ) 
+elseif ret == 2 then 
+say ( gameforge . change_name . error_rename ) 
+say ( "" ) 
+char_log ( 0 , "CHANGE_NAME" , "CAN NOT USE NAME" ) 
+elseif ret == 3 then 
+say ( gameforge . change_name . error_rename ) 
+say ( "" ) 
+char_log ( 0 , "CHANGE_NAME" , "ALREADY USING NAME" ) 
+elseif ret == 4 then 
+say ( gameforge . change_name . success_name ) 
+say ( "" ) 
+item . remove ( ) 
+pc . setqf ( "next_time" , get_time ( ) + time_hour_to_sec ( 24 * 15 ) ) 
+char_log ( 0 , "CHANGE_NAME" , "SUCCESS: from " .. name .. " to " .. str ) 
+else 
+say ( gameforge . change_name . error_unk ) 
+say ( "" ) 
+char_log ( 0 , "CHANGE_NAME" , "UNKNOWN NAME" ) 
+end 

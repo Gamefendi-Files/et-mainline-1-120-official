@@ -1,0 +1,172 @@
+quest collect_quest_lv96  begin
+	state start begin
+	end
+
+	state run begin
+		when login or levelup with pc.level >= 96  begin
+			set_state(information)
+		end
+	end
+
+	state information begin
+		when letter begin
+			local v = find_npc_by_vnum(20091)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, mob_name(20091))
+			end
+
+			send_letter(gameforge.collect_quest_lv96.letter01)
+		end
+
+		when button or info begin
+			---                                                   l
+			say("")
+			say(string.format(gameforge.collect_quest_lv96.msg01, mob_name(20091)))
+			say("")
+		end
+
+		when __TARGET__.target.click or
+			20091.chat.gameforge.collect_quest_lv96.chat01 begin
+			target.delete("__TARGET__")
+			---                                                   l
+			say_title(mob_name(20091))
+			say(gameforge.collect_quest_lv96.msg02)
+			say("")
+			wait()
+			say_title(mob_name(20091))
+			say(string.format(gameforge.collect_quest_lv96.msg03, 10))
+			say("")
+			set_state(go_to_disciple)
+			pc.setqf("duration", 0)
+			pc.setqf("collect_count", 0)
+			pc.setqf("drink_drug", 0)
+		end
+	end
+
+	state go_to_disciple begin
+		when letter begin
+			send_letter(gameforge.collect_quest_lv96.letter01)
+		end
+
+		when button or info begin
+			say_title(gameforge.collect_quest_lv96.title01)
+			---                                                   l
+			say(string.format(gameforge.collect_quest_lv96.msg04, mob_name(20091), mob_name(2412), mob_name(2414)))
+			say_item_vnum(30253)
+			say_reward(string.format(gameforge.collect_quest_lv96.msg05, pc.getqf("collect_count"), 10))
+			say("")
+		end
+
+		when 71035.use  or 76020.use begin
+			if get_time() < pc.getqf("duration") then
+				say(gameforge.collect_quest_lv96.msg06)
+				return
+			end
+
+			if pc.getqf("drink_drug") == 1 then
+				say(gameforge.collect_quest_lv96.msg07)
+				return
+			end
+
+			if pc.count_item(30253) == 0 then
+				---
+				say(gameforge.collect_quest_lv96.msg08)
+				say("")
+				say("")
+				return
+			end
+
+			item.remove()
+			pc.setqf("drink_drug", 1)
+		end
+
+		when 2412.kill or 2414.kill begin
+			local s = number(1, 100)
+
+			if s <= 1 then
+				pc.give_item2(30253, 1)
+				send_letter(gameforge.collect_quest_lv96.msg09)
+			end
+		end
+
+
+    	when 20091.chat.gameforge.collect_quest_lv96.chat02 with pc.count_item(30253) > 0 begin
+			if get_time() < pc.getqf("duration") then
+				say_title(mob_name(20091))
+				say(gameforge.collect_quest_lv96.msg10)
+				say("")
+				return
+			end
+
+			if pc.count_item(30253) <= 0 then
+				say_title(mob_name(20091))
+				say(string.format(gameforge.collect_quest_lv96.msg11, item_name(30253)))
+				return
+			end
+
+			say_title(mob_name(20091))
+			say(gameforge.collect_quest_lv96.msg15)
+			say("")
+			pc.remove_item(30253, 1)
+
+			if is_test_server()  then
+				pc.setqf("duration", get_time()+2)
+			else
+				pc.setqf("duration", get_time()+60*60*6)
+			end
+
+			wait()
+
+			local pass_percent
+			if pc.getqf("drink_drug") == 0 then
+				pass_percent = 10
+			else
+				pass_percent = 60
+			end
+
+			local s = number(1, 100)
+			if s <= pass_percent then
+				if pc.getqf("collect_count") < 9 then
+					local index = pc.getqf("collect_count")+1
+					pc.setqf("collect_count", index)
+					say_title(mob_name(20091))
+					say(string.format(gameforge.collect_quest_lv96.msg12, 10-pc.getqf("collect_count")))
+					say("")
+					pc.setqf("drink_drug", 0)
+					return
+				end
+				say_title(mob_name(20091))
+				say(gameforge.collect_quest_lv96.msg13)
+				pc.setqf("collect_count", 10)
+				local s = select(gameforge.collect_quest_lv96.bonus1, gameforge.collect_quest_lv96.bonus2, gameforge.collect_quest_lv96.bonus3)
+				if 1 == s then
+					affect.add_collect(1, 2000, 60*60*24*365*60) --hp apply index == 1
+					pc.setqf("reward", 1)
+				elseif 2 == s then
+					affect.add_collect(apply.DEF_GRADE_BONUS, 700, 60*60*24*365*60)
+					pc.setqf("reward", 2)
+				else
+					affect.add_collect(apply.ATT_GRADE_BONUS, 300, 60*60*24*365*60)
+					pc.setqf("reward", 3)
+				end
+				pc.setqf("collect_count", 0)
+				pc.setqf("drink_drug", 0)
+				pc.setqf("duration", 0)
+				clear_letter()
+				set_state(__complete)
+				return
+			else
+				pc.setqf("drink_drug", 0)
+				say_title(mob_name(20091))
+				say(gameforge.collect_quest_lv96.msg14)
+				say("")
+				return
+			end
+		end
+	end
+
+	state __complete begin
+	end
+end
+

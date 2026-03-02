@@ -1,0 +1,76 @@
+quest ride begin
+	state start begin
+		function GetRideInfo(vnum, mount_vnum)
+			-- all seals type ITEM_UNIQUE (16), subtype UNIQUE_SPECIAL_RIDE (2) or UNIQUE_SPECIAL_MOUNT_RIDE (3), and inside the group 10030 in special_item_group.txt
+			-- all seals type ITEM_COSTUME (28), and subtype COSTUME_MOUNT (2) with LimitType0 == LIMIT_REAL_TIME (7)
+			mount_info = {}
+			if mount_vnum==nil then
+				mount_info["mount_vnum"] = item.get_value(4)
+			else
+				mount_info["mount_vnum"] = mount_vnum
+			end
+			mount_info["duration"] = 60*60*24*365
+			mount_info["req_level"] = -1
+			return mount_info
+		end
+
+		function Ride(vnum, remain_time, mount_vnum)
+			local mount_info = ride.GetRideInfo(vnum, mount_vnum)
+			if mount_info["req_level"] ~= nil and pc.level < mount_info["req_level"] then
+				syschat("Level not enough")
+			else
+				if 112 == pc.get_map_index() then -- duel map
+					return
+				end
+
+				if remain_time==0 then
+					if mount_info["duration"] <= 0 then
+						if item.is_available0() then
+							remain_time = item.get_socket(0)
+						else
+							remain_time = 60
+						end
+					else
+						remain_time = mount_info["duration"]
+					end
+				end
+
+				-- syschat("duration "..remain_time)
+				-- syschat("socket1 "..item.get_socket(1))
+				-- syschat("socket2 "..item.get_socket(2))
+				-- syschat(string.format("pc.mount %d %d", mount_info["mount_vnum"], remain_time))
+				pc.mount(mount_info["mount_vnum"], remain_time)
+				if mount_info["bonus_id"]~= nil then --deprecated way of adding bonus
+					pc.mount_bonus(mount_info["bonus_id"], mount_info["bonus_value"], remain_time)
+				end
+			end
+		end
+
+		when login begin
+			local vnum, remain_time, mount_vnum = pc.get_special_ride_vnum()
+			-- syschat(string.format("vnum %d remain_time %d mount_vnum %d", vnum, remain_time, mount_vnum))
+			-- syschat("remain_time "..remain_time)
+			if vnum==0 then return end
+
+			local mount_info = ride.GetRideInfo(vnum)
+			if mount_info==nil then return end
+
+			-- syschat(string.format("vnum %d remain_time %d", vnum, remain_time))
+			ride.Ride(vnum, remain_time, mount_vnum)
+		end
+
+		when sig_use begin
+			if pc.is_polymorphed() then
+				syschat("You are transformed")
+			elseif not pc.is_riding() then
+				if horse.is_summon() then
+					horse.unsummon()
+				end
+				ride.Ride(item.vnum, 0)
+			else
+				syschat("You are already riding")
+			end
+		end
+
+	end
+end

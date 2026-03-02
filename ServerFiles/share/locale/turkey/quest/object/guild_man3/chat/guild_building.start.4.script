@@ -1,0 +1,31 @@
+local level_limit = 40 
+local gold_required = 200000 
+local disband_time = 86400 
+if game . get_event_flag ( "guild_withdraw_delay" ) * disband_time > get_global_time ( ) - pc . getqf ( "new_withdraw_time" ) then 
+say_title ( gameforge . find_squareguard . _10_targetVid ) 
+say ( gameforge . guild_manage . _180_say ) 
+return 
+end 
+if game . get_event_flag ( "guild_disband_delay" ) * disband_time > get_global_time ( ) - pc . getqf ( "new_withdraw_time" ) then 
+say_title ( gameforge . find_squareguard . _10_targetVid ) 
+say ( gameforge . guild_manage . _200_say ) 
+return 
+end 
+say_title ( gameforge . find_squareguard . _10_targetVid ) 
+say ( gameforge . guild_manage . _210_say ) 
+local s = select ( gameforge . locale . guild . yes , gameforge . locale . guild . no ) 
+if s == 2 then 
+return 
+end 
+if pc . level >= level_limit then 
+if pc . gold >= gold_required then 
+game . request_make_guild ( ) 
+else 
+say_title ( gameforge . find_squareguard . _10_targetVid ) 
+say ( gameforge . guild_manage . _220_say ) 
+return 
+end 
+else 
+say_title ( gameforge . find_squareguard . _10_targetVid ) 
+say ( gameforge . guild_manage . _230_say ) 
+end 

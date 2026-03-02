@@ -1,0 +1,8 @@
+SYSERR: Dec 22 04:00:40.429577 :: pid_init: 
+Start of pid: 2106
+
+SYSERR: Dec 22 04:00:40.431685 :: socket_connect: HOST 192.168.1.105:15900, could not connect.
+SYSERR: Dec 22 04:00:43.3008 :: socket_connect: HOST 192.168.1.105:15900, could not connect.
+SYSERR: Dec 22 04:03:53.878558 :: heart_idle: losing 186 seconds. (lag occured)
+SYSERR: Dec 22 04:08:04.51599 :: GetMoveMotionSpeed: cannot find motion (name None - Manni race 20246 mode 0)
+SYSERR: Dec 22 04:08:04.530712 :: GetMoveMotionSpeed: cannot find motion (name None - Manni race 20246 mode 0)

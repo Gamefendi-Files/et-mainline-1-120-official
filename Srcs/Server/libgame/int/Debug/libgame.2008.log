@@ -1,0 +1,11 @@
+﻿  attribute.cc
+  grid.cc
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libgame\src\attribute.cc(69,23): warning C4244: '=': conversion from 'DWORD' to 'WORD', possible loss of data
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libgame\src\attribute.cc(82,23): warning C4244: '=': conversion from 'DWORD' to 'BYTE', possible loss of data
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libgame\src\attribute.cc(137,20): warning C4244: '=': conversion from 'DWORD' to 'BYTE', possible loss of data
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libgame\src\attribute.cc(143,20): warning C4244: '=': conversion from 'DWORD' to 'WORD', possible loss of data
+  targa.cc
+  Generating Code...
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1554,5): warning MSB8012: TargetPath(C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libgame\lib\libgame.lib) does not match the Library's OutputFile property value (C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libgame\lib\libgame_d.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1556,5): warning MSB8012: TargetName(libgame) does not match the Library's OutputFile property value (libgame_d). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+  libgame.2008.vcxproj -> C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libgame\lib\libgame.lib

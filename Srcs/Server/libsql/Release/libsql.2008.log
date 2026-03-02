@@ -1,0 +1,34 @@
+﻿  AsyncSQL.cpp
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libsql\AsyncSQL.h(65,38): warning C4244: '=': conversion from 'my_ulonglong' to 'uint32_t', possible loss of data
+  (compiling source file 'AsyncSQL.cpp')
+  
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libsql\AsyncSQL.h(66,46): warning C4244: '=': conversion from 'my_ulonglong' to 'uint32_t', possible loss of data
+  (compiling source file 'AsyncSQL.cpp')
+  
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libsql\AsyncSQL.h(70,37): warning C4244: '=': conversion from 'my_ulonglong' to 'uint32_t', possible loss of data
+  (compiling source file 'AsyncSQL.cpp')
+  
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libsql\AsyncSQL.cpp(268,3): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Semaphore.cpp
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libsql\AsyncSQL.h(65,38): warning C4244: '=': conversion from 'my_ulonglong' to 'uint32_t', possible loss of data
+  (compiling source file 'Semaphore.cpp')
+  
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libsql\AsyncSQL.h(66,46): warning C4244: '=': conversion from 'my_ulonglong' to 'uint32_t', possible loss of data
+  (compiling source file 'Semaphore.cpp')
+  
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libsql\AsyncSQL.h(70,37): warning C4244: '=': conversion from 'my_ulonglong' to 'uint32_t', possible loss of data
+  (compiling source file 'Semaphore.cpp')
+  
+  Statement.cpp
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libsql\AsyncSQL.h(65,38): warning C4244: '=': conversion from 'my_ulonglong' to 'uint32_t', possible loss of data
+  (compiling source file 'Statement.cpp')
+  
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libsql\AsyncSQL.h(66,46): warning C4244: '=': conversion from 'my_ulonglong' to 'uint32_t', possible loss of data
+  (compiling source file 'Statement.cpp')
+  
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libsql\AsyncSQL.h(70,37): warning C4244: '=': conversion from 'my_ulonglong' to 'uint32_t', possible loss of data
+  (compiling source file 'Statement.cpp')
+  
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libsql\Statement.cpp(151,29): warning C4244: '=': conversion from 'my_ulonglong' to 'int', possible loss of data
+  Tellwait.cpp
+  libsql.2008.vcxproj -> C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libsql\libsql.lib

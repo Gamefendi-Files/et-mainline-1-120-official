@@ -1,0 +1,6 @@
+say ( "Artýk köyünüze dönmek ister misiniz?" ) 
+if select ( "evet" , "hayýr" ) == 1 then 
+warp_to_village ( ) 
+else 
+say ( "Ýyi. Geri dönmek istersen benimle konuþ." ) 
+end 

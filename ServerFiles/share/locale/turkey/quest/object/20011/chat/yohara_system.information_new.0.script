@@ -1,0 +1,8 @@
+target . delete ( "heykel" ) 
+say_title ( "Savaþçý Heykeli: " ) 
+say ( "" ) 
+say ( "Tebrikler.. " ) 
+say ( "Hidra'yý maðlup ettin. Artýk gücünü kanýtladýn " ) 
+say ( "þampiyon seviyesine geçiþ yapabilirsin. " ) 
+pc . set_conquerorlevel ( 1 ) 
+set_state ( "__COMPLETE__" ) 

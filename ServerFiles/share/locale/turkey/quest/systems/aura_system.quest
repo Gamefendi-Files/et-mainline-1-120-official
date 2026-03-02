@@ -1,0 +1,25 @@
+quest acce_system begin
+	state start begin
+		when 60003.chat."Aura: Bonus Emiþi" begin
+			say_title(mob_name(60003)..":")
+			say("Bonuslarý auraya absorbe etmek ister misin?")
+			if select(locale.yes, locale.no) == 2 then return end
+			setskin(NOWINDOW)
+			game.open_aura_absorb_window()
+		end
+		when 60003.chat."Aura: Yükseltme" begin
+			say_title(mob_name(60003)..":")
+			say("Auraný yükseltmek ister misin?[ENTER]")
+			if select(locale.yes, locale.no) == 2 then return end
+			setskin(NOWINDOW)
+			game.open_aura_growth_window()
+		end
+		when 60003.chat."Aura: Dönüþtürme" begin
+			say_title(mob_name(60003)..":")
+			say("Auraný dönüþtürmek ister misin?[ENTER]")
+			if select(locale.yes, locale.no) == 2 then return end
+			setskin(NOWINDOW)
+			game.open_aura_evolve_window()
+		end
+	end
+end

@@ -1,0 +1,177 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster2\plechi_nightmare_destroyer\skill01.GR2"
+MotionDuration           5.066667
+
+Group MotionEventData
+{
+    MotionEventDataCount     12
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.400000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/nightmare_destroyer_skill01a.mse"
+        EffectPosition       -350.000000 -190.000000 0.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         0.700000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/nightmare_destroyer_skill01a.mse"
+        EffectPosition       350.000000 -190.000000 0.000000
+    }
+    Group Event02
+    {
+        MotionEventType      1
+        StartingTime         1.080000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/nightmare_destroyer_skill01a.mse"
+        EffectPosition       -350.000000 -190.000000 0.000000
+    }
+    Group Event03
+    {
+        MotionEventType      1
+        StartingTime         1.400000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/nightmare_destroyer_skill01a.mse"
+        EffectPosition       350.000000 -190.000000 0.000000
+    }
+    Group Event04
+    {
+        MotionEventType      1
+        StartingTime         1.800000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/nightmare_destroyer_skill01a.mse"
+        EffectPosition       -350.000000 -190.000000 0.000000
+    }
+    Group Event05
+    {
+        MotionEventType      1
+        StartingTime         2.300000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/nightmare_destroyer_skill01b.mse"
+        EffectPosition       0.000000 -100.000000 0.000000
+    }
+    Group Event06
+    {
+        MotionEventType      1
+        StartingTime         3.300000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/nightmare_destroyer_skill01c.mse"
+        EffectPosition       0.000000 -500.000000 0.000000
+    }
+   Group Event07
+    {
+        MotionEventType      2
+        StartingTime         0.400000
+        
+        DuringTime           2.500000
+        Power                150
+        AffectingRange       1500
+    }
+    Group Event08
+    {
+        MotionEventType      4
+        StartingTime         0.400000
+        DuringTime           1.100000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        4
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           800.000000
+            Position         0.000000 0.000000 0.000000
+        }
+    }
+   Group Event09
+    {
+        MotionEventType      2
+        StartingTime         3.300000
+        
+        DuringTime           1.000000
+        Power                400
+        AffectingRange       1500
+    }
+    Group Event10
+    {
+        MotionEventType      4
+        StartingTime         3.300000
+        DuringTime           1.000000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           1200.000000
+            Position         0.000000 0.000000 0.000000
+        }
+    }
+    Group Event11
+    {
+        MotionEventType      4
+        StartingTime         3.300000
+        DuringTime           1.000000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           600.000000
+            Position         0.000000 -1500.000000 0.000000
+        }
+    }
+}

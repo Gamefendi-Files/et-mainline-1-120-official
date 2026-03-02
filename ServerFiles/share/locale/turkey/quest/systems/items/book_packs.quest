@@ -1,0 +1,45 @@
+-- https://metin2.dev/topic/29299-quest-official-encyclopedia-packs/
+-- https://en-wiki.metin2.gameforge.com/index.php/Saturn_Encyclopedia_(L)
+quest book_packs begin
+	state start begin
+		when 71178.use -- Instinct Lycan x10
+		  or 71179.use -- Instinct Lycan x25
+		begin
+			local item_vnum = item.get_vnum();
+			pc.remove_item(item_vnum, 1);
+
+			local contained_books = (math.mod(item_vnum, 2) == 0) and 10 or 25;
+			for i = 1, contained_books do
+				pc.give_item2(50529 + math.random(6), 1);
+			end -- for
+		end -- when
+
+		when 71203.use -- Body-Force Warrior x10
+		  or 71204.use -- Body-Force Warrior x25
+		  or 71205.use -- Mental-Fight Warrior x10
+		  or 71206.use -- Mental-Fight Warrior x25
+		  or 71207.use -- Blade-Fight Ninja x10
+		  or 71208.use -- Blade-Fight Ninja x25
+		  or 71209.use -- Archery Ninja x10
+		  or 71210.use -- Archery Ninja x25
+		  or 71211.use -- Weaponry Sura x10
+		  or 71212.use -- Weaponry Sura x25
+		  or 71213.use -- Black Magic Sura x10
+		  or 71214.use -- Black Magic Sura x25
+		  or 71215.use -- Dragon Force Shaman x10
+		  or 71216.use -- Dragon Force Shaman x25
+		  or 71217.use -- Healing Force Shaman x10
+		  or 71218.use -- Healing Force Shaman x25
+		begin
+			local item_vnum = item.get_vnum();
+			pc.remove_item(item_vnum, 1);
+
+			local job_vnum = math.floor((item_vnum - 71203) / 4);
+			local group_vnum = 1 - math.mod(math.floor((item_vnum - 1) / 2), 2);
+			local contained_books = (math.mod(item_vnum, 2) == 0) and 25 or 10;
+			for i = 1, contained_books do
+				pc.give_item2(50400 + 30 * job_vnum + 15 * group_vnum + math.random(6), 1);
+			end -- for
+		end -- when
+	end -- state
+end -- quest

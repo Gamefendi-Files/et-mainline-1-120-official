@@ -1,0 +1,80 @@
+say_title ( item_name ( 50515 ) ) 
+say ( "" ) 
+if pc . get_skill_group ( ) == 0 then 
+say ( "Henüz bir eðitim'e baþlamadýn." ) 
+return 
+end 
+local check_learned = 0 
+local anti_skill_list = { 221 , 222 , 223 , 224 , 225 , 226 , 227 , 228 , 229 } 
+for i = 1 , table . getn ( anti_skill_list ) begin 
+skill_vnum = anti_skill_list [ i ] 
+if pc . get_skill_level ( skill_vnum ) > 0 then 
+check_learned = 1 
+end 
+end 
+if check_learned == 1 then 
+say ( "Sen zaten bir skill öðrendin." ) 
+return 
+end 
+anti_skill_list_name = { 
+[ 221 ] = "Kýlýç Çevirme Korunma" , 
+[ 222 ] = "Kamuflaj Korunma" , 
+[ 223 ] = "Parmak Darbesi Korunma" , 
+[ 224 ] = "Ejderha Atýþý Korunma" , 
+[ 225 ] = "Ruh Vuruþu Korunma" , 
+[ 226 ] = "Ateþli Ok Korunma" , 
+[ 227 ] = "Karanlýk Vuruþ Korunma" , 
+[ 228 ] = "Þimþek Çaðýrma Korunma" , 
+[ 229 ] = "Kurt Nefesi Korunma" 
+} 
+local skill_vnum_list = { } 
+local skill_name_list = { } 
+local skill_vnum_list2 = { } 
+local skill_name_list2 = { } 
+for i = 1 , table . getn ( anti_skill_list ) begin 
+skill_vnum = anti_skill_list [ i ] 
+if pc . get_skill_level ( skill_vnum ) < 1 then 
+if i < 5 then 
+table . insert ( skill_vnum_list , skill_vnum ) 
+table . insert ( skill_name_list , anti_skill_list_name [ skill_vnum ] ) 
+else 
+table . insert ( skill_vnum_list2 , skill_vnum ) 
+table . insert ( skill_name_list2 , anti_skill_list_name [ skill_vnum ] ) 
+end 
+end 
+end 
+table . insert ( skill_vnum_list , 4 ) 
+table . insert ( skill_name_list , "Diðer Skiller" ) 
+if table . getn ( skill_vnum_list ) == 0 then 
+say ( "Herhangi bir korunma becerin yok." ) 
+return 
+end 
+table . insert ( skill_name_list2 , "Iptal" ) 
+say ( "Bu antik kitap çok güçlü gibi görünüyor!" ) 
+say ( "Muazzam becerilerin anahtarý! ama önce" ) 
+say ( "Ama önce yapmanýz gereken tek bir beceri seçebilirsin." ) 
+say ( "Akýllýca seçim yap!" ) 
+local i = select_table ( skill_name_list ) 
+local sTablo = 1 
+if i == 5 then 
+i = select_table ( skill_name_list2 ) 
+sTablo = 2 
+end 
+if i == 6 then return end 
+local name = skill_name_list [ i ] 
+local vnum = skill_vnum_list [ i ] 
+if sTablo == 2 then 
+name = skill_name_list2 [ i ] 
+vnum = skill_vnum_list2 [ i ] 
+end 
+say_title ( item_name ( 50515 ) ) 
+say ( "" ) 
+say ( string . format ( "Öðrenmek için bunu seçtin %s." , name ) ) 
+say ( "Bunun için emin misin?" ) 
+local confirm = select ( "Evet" , "Hayýr" ) 
+if confirm == 1 then 
+pc . remove_item ( item . get_vnum ( ) , 1 ) 
+pc . set_skill_level ( vnum , 20 ) 
+return 
+end 
+return 

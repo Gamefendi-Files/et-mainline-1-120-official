@@ -1,0 +1,7 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8004: Output dizini sonda bir eğik çizgiyle bitmiyor. Output dizininin düzgün değerlendirilmesi için bu eğik çizgi gerekli olduğundan bu oluşturma örneği eğik çizgiyi ekleyecek.
+  crc32.cc
+  qc.cc
+D:\mainline_updated-u10\ServerSource\game\src\quest\qc.cc(907,23): warning C4018: '<': işaretli/işaretsiz uyuşmazlığı
+  Kod Üretiliyor...
+crc32.obj : warning LNK4075: '/EDITANDCONTINUE' belirtimi nedeniyle '/SAFESEH' yoksayılıyor
+  qc.2008.vcxproj -> D:\mainline_updated-u10\ServerSource\bin\Debug\qc.exe

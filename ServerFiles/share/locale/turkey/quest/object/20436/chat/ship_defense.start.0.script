@@ -1,0 +1,12 @@
+say ( "Yelken açýp yolculuðunuza baþlamak ister misiniz??" ) 
+if select ( "evet" , "hayýr" ) == 1 then 
+if ship_defense_mgr . is_running ( ) then 
+say ( "Gemi Savunmasý çoktan baþladý." ) 
+return 
+end 
+local remove_ticket = true 
+if ship_defense . check_requirements ( remove_ticket ) then 
+say ( "Neler oluyor? Deniz giderek sertleþiyor. [ENTER]Fýrtýna yaklaþýyor mu??" ) 
+ship_defense_mgr . start ( ) 
+end 
+end 

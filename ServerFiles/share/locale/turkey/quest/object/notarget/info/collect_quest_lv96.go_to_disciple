@@ -1,0 +1,5 @@
+say_title ( gameforge . collect_quest_lv96 . title01 ) 
+say ( string . format ( gameforge . collect_quest_lv96 . msg04 , mob_name ( 20091 ) , mob_name ( 2412 ) , mob_name ( 2414 ) ) ) 
+say_item_vnum ( 30253 ) 
+say_reward ( string . format ( gameforge . collect_quest_lv96 . msg05 , pc . getqf ( "collect_count" ) , 10 ) ) 
+say ( "" ) 

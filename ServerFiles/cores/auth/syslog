@@ -1,0 +1,104 @@
+SYSERR: Dec 22 04:00:32.838351 :: pid_init: 
+Start of pid: 2082
+
+Dec 22 04:00:32.852673 :: SYSTEM: BINDING TCP PORT ON [11900] (fd 17)
+Dec 22 04:00:32.853057 :: SYSTEM: BINDING TCP PORT ON [12900] (fd 18)
+Dec 22 04:00:32.860810 :: SYSTEM: Trying to connect to 192.168.1.105:15900
+SYSERR: Dec 22 04:00:32.863970 :: socket_connect: HOST 192.168.1.105:15900, could not connect.
+Dec 22 04:00:32.872890 :: Initializing Guild
+Dec 22 04:00:32.872969 :: 	No need for auth server
+Dec 22 04:00:32.896342 :: FISH: ²Î                       vnum     0 prob 3000 3000 2100 2000 len 0 0 0
+Dec 22 04:00:32.898312 :: FISH: ±Ý¹ÝÁö                   vnum 50002 prob   50   50  200  200 len 0 0 0
+Dec 22 04:00:32.899530 :: FISH: ÇÇ¶ó¹Ì                   vnum 27802 prob 2000 1800  800 2200 len 500 550 600
+Dec 22 04:00:32.902410 :: FISH: ºØ¾î                     vnum 27803 prob 1950 1600  800  700 len 1000 2500 2800
+Dec 22 04:00:32.903132 :: FISH: ½î°¡¸®                   vnum 27804 prob  900  800  700  600 len 2000 3500 3800
+Dec 22 04:00:32.903190 :: FISH: ¿ùÃ´ºØ¾î                 vnum 27805 prob  700  700  700  600 len 3030 3500 4300
+Dec 22 04:00:32.903266 :: FISH: À×¾î                     vnum 27806 prob  200  300  600  800 len 4000 6000 10000
+Dec 22 04:00:32.903322 :: FISH: ¿¬¾î                     vnum 27807 prob  200  200  500  600 len 6000 8000 10000
+Dec 22 04:00:32.903376 :: FISH: Çâ¾î                     vnum 27808 prob  100  100  250  200 len 1500 3000 3800
+Dec 22 04:00:32.903431 :: FISH: ¼Û¾î                     vnum 27809 prob  100  100  250  350 len 5000 7000 8000
+Dec 22 04:00:32.905265 :: FISH: ¹Î¹°Àå¾î                 vnum 27810 prob    0  100  250  200 len 4000 5000 6000
+Dec 22 04:00:32.905330 :: FISH: ¹«Áö°³¼Û¾î               vnum 27811 prob    0  100  250  150 len 5000 7000 8000
+Dec 22 04:00:32.905385 :: FISH: °­¼Û¾î                   vnum 27812 prob    0  100  250  150 len 4000 6000 7000
+Dec 22 04:00:32.905611 :: FISH: ·¯µå                     vnum 27813 prob    0  100  200  100 len 4000 6000 10000
+Dec 22 04:00:32.905676 :: FISH: ÆÛÄ¡                     vnum 27814 prob    0  100  200  100 len 3000 4000 5000
+Dec 22 04:00:32.908012 :: FISH: ÅÙÄ¡                     vnum 27815 prob    0   50  200  100 len 3500 5500 8000
+Dec 22 04:00:32.908077 :: FISH: ¸Þ±â                     vnum 27816 prob   50   50  200  100 len 3000 5000 10000
+Dec 22 04:00:32.910154 :: FISH: ¹Ì²Ù¶óÁö                 vnum 27817 prob    0    0    0    0 len 1800 2200 3000
+Dec 22 04:00:32.910210 :: FISH: ¹é·Ã                     vnum 27818 prob   50   50  200  100 len 5000 8000 10000
+Dec 22 04:00:32.910285 :: FISH: Àº¾î                     vnum 27819 prob    0    0    0    0 len 1500 3000 3800
+Dec 22 04:00:32.910340 :: FISH: ºù¾î                     vnum 27820 prob    0    0    0    0 len 1500 3000 3800
+Dec 22 04:00:32.910394 :: FISH: ½¬¸®                     vnum 27821 prob    0    0    0    0 len 1000 1500 2000
+Dec 22 04:00:32.910449 :: FISH: ºñ´ÃÀ×¾î                 vnum 27822 prob    0    0    0    0 len 4000 6000 10000
+Dec 22 04:00:32.914657 :: FISH: È²±ÝºØ¾î                 vnum 27823 prob    0    0    0    0 len 1000 3000 3500
+Dec 22 04:00:32.917081 :: FISH: Å»»ö¾à                   vnum 70201 prob  100  100    0    0 len 0 0 0
+Dec 22 04:00:32.917145 :: FISH: ¿°»ö¾à(Èò»ö)             vnum 70202 prob   85   85    0    0 len 0 0 0
+Dec 22 04:00:32.917201 :: FISH: ¿°»ö¾à(±Ý»ö)             vnum 70203 prob   85   85    0    0 len 0 0 0
+Dec 22 04:00:32.920853 :: FISH: ¿°»ö¾à(»¡°£»ö)           vnum 70204 prob   85   85    0    0 len 0 0 0
+Dec 22 04:00:32.921582 :: FISH: ¿°»ö¾à(°¥»ö)             vnum 70205 prob   85   85    0    0 len 0 0 0
+Dec 22 04:00:32.921666 :: FISH: ¿°»ö¾à(°ËÀº»ö)           vnum 70206 prob   85   85    0    0 len 0 0 0
+Dec 22 04:00:32.921725 :: FISH: ÀºµÐÀÚÀÇ ¸ÁÅä            vnum 70048 prob   25   25  200  100 len 0 0 0
+Dec 22 04:00:32.921783 :: FISH: Çà¿îÀÇ ¹ÝÁö              vnum 70049 prob   25   25  200  100 len 0 0 0
+Dec 22 04:00:32.921841 :: FISH: ¼±¿ÕÀÇ ÁõÇ¥              vnum 70050 prob   25   25  200  100 len 0 0 0
+Dec 22 04:00:32.921899 :: FISH: ¼±¿ÕÀÇ Àå°©              vnum 70051 prob   25   25  200  100 len 0 0 0
+Dec 22 04:00:32.921972 :: FISH: ±Ýµ¢¾î¸®                 vnum 80008 prob   25   25  100  100 len 0 0 0
+Dec 22 04:00:32.922031 :: FISH: Àº¿­¼è                   vnum 50009 prob    0    0  150  100 len 0 0 0
+Dec 22 04:00:32.923944 :: FISH: ±Ý¿­¼è                   vnum 50008 prob    0    0  100   50 len 0 0 0
+Dec 22 04:00:32.924538 :: FISH: prob table 0 9950
+Dec 22 04:00:32.924599 :: FISH: prob table 1 9950
+Dec 22 04:00:32.924654 :: FISH: prob table 2 9800
+Dec 22 04:00:32.924728 :: FISH: prob table 3 9900
+Dec 22 04:00:32.924787 :: CLIENT_DESC [db_clientdesc] trying DBPacket() while not connected
+Dec 22 04:00:32.924846 :: Cube_Init locale/turkey/cube.txt
+Dec 22 04:00:32.962644 :: Blend_Item_init locale/turkey/blend.txt 
+Dec 22 04:00:35.1760 :: [PackageCryptInfo] . is not crypt file. pass!
+Dec 22 04:00:35.1832 :: [PackageCryptInfo] .. is not crypt file. pass!
+Dec 22 04:00:35.2081 :: SYSTEM: Trying to connect to 192.168.1.105:15900
+SYSERR: Dec 22 04:00:35.2310 :: socket_connect: HOST 192.168.1.105:15900, could not connect.
+Dec 22 04:00:38.4605 :: SYSTEM: Trying to connect to 192.168.1.105:15900
+SYSERR: Dec 22 04:00:38.4909 :: socket_connect: HOST 192.168.1.105:15900, could not connect.
+Dec 22 04:00:41.4458 :: SYSTEM: Trying to connect to 192.168.1.105:15900
+SYSERR: Dec 22 04:00:41.4709 :: socket_connect: HOST 192.168.1.105:15900, could not connect.
+Dec 22 04:00:44.36450 :: SYSTEM: Trying to connect to 192.168.1.105:15900
+Dec 22 04:00:44.36683 :: SYSTEM: connected to server (fd 19, ptr 0x218bf400)
+Dec 22 04:01:36.774463 :: SYSTEM: new connection from [192.168.1.104] fd: 20 handshake 2208511916 output input_len 0, ptr 0x218f7700
+Dec 22 04:01:36.932249 :: Handshake: client_time 0 server_time 61932
+Dec 22 04:01:37.207513 :: AUTH_PHASE 0x218f7700
+Dec 22 04:01:37.280883 :: InputAuth::Login : test1(5) desc 0x218f7700
+Dec 22 04:01:37.280974 :: SetLoginKey 1276436319
+Dec 22 04:01:37.281043 :: InputAuth::Login : key 1276436319:0x5d4726ce login test1
+Dec 22 04:01:37.319990 :: QID_AUTH_LOGIN: START 1276436319 0x218f7700
+Dec 22 04:01:37.320237 :: Create_Time 1724440445 20240824
+Dec 22 04:01:37.320299 :: Block Time -1 
+Dec 22 04:01:37.328892 :: SetRemainSecs test1 0 type 2
+Dec 22 04:01:37.328982 :: SendAuthLogin test1 key 19
+Dec 22 04:01:37.522137 :: AuthLogin result 1 key 1276436319
+Dec 22 04:01:37.642162 :: SYSTEM: closing socket. DESC #20
+Dec 22 04:03:50.723088 :: SYSTEM: new connection from [192.168.1.104] fd: 20 handshake 3623472650 output input_len 0, ptr 0x218f7700
+Dec 22 04:03:50.855360 :: Handshake: client_time 0 server_time 195855
+Dec 22 04:03:51.213062 :: AUTH_PHASE 0x218f7700
+Dec 22 04:03:51.279205 :: InputAuth::Login : test1(5) desc 0x218f7700
+Dec 22 04:03:51.279320 :: SetLoginKey 2028290876
+Dec 22 04:03:51.279380 :: InputAuth::Login : key 2028290876:0x69a8bdbf login test1
+Dec 22 04:03:51.396715 :: QID_AUTH_LOGIN: START 2028290876 0x218f7700
+Dec 22 04:03:51.398071 :: Create_Time 1724440445 20240824
+Dec 22 04:03:51.398181 :: Block Time -1 
+Dec 22 04:03:51.501905 :: SetRemainSecs test1 0 type 2
+Dec 22 04:03:51.502590 :: SendAuthLogin test1 key 19
+Dec 22 04:03:51.678211 :: AuthLogin result 1 key 2028290876
+Dec 22 04:03:51.785231 :: SYSTEM: closing socket. DESC #20
+Dec 22 04:04:03.673986 :: BILLING: ON test1 key 2028290876 ptr 0x21901230
+Dec 22 04:07:57.794069 :: SetRemainSecs test1 0 type 2
+Dec 22 04:07:57.794280 :: BILLING: PUSH test1 234 type 2
+Dec 22 04:07:57.794366 :: BILLING: OFF test1 key 2028290876 ptr 0x21901230
+Dec 22 04:07:58.271468 :: FLUSH_USE_TIME: count 1
+Dec 22 04:07:59.69465 :: BILLING: ON test1 key 2028290876 ptr 0x21901230
+Dec 22 04:08:15.91838 :: SetRemainSecs test1 0 type 2
+Dec 22 04:08:15.92029 :: BILLING: PUSH test1 16 type 2
+Dec 22 04:08:15.92092 :: BILLING: OFF test1 key 2028290876 ptr 0x21901230
+Dec 22 04:08:15.199719 :: FLUSH_USE_TIME: count 1
+Dec 22 04:08:16.468180 :: BILLING: ON test1 key 2028290876 ptr 0x21901230
+Dec 22 04:09:00.978225 :: SetRemainSecs test1 0 type 2
+Dec 22 04:09:00.978405 :: BILLING: PUSH test1 44 type 2
+Dec 22 04:09:00.978469 :: BILLING: OFF test1 key 2028290876 ptr 0x21901230
+Dec 22 04:09:01.938086 :: FLUSH_USE_TIME: count 1

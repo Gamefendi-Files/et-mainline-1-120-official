@@ -1,0 +1,33 @@
+if game . get_event_flag ( "ship_defense" ) ~= 1 then 
+say ( "Gemi Savunmasý yakýnda kullanýma sunulacak." ) 
+return 
+end 
+if ship_defense_mgr . require_cooldown ( ) then 
+if pc . getqf ( "cooldown" ) > get_time ( ) then 
+say ( string . format ( "Henüz giremezsiniz. Kalan süre: %s" , wait_time_to_str ( pc . getqf ( "cooldown" ) ) ) ) 
+if pc . is_gm ( ) then 
+if select ( "<GM> Bekleme Süresini Sýfýrla" , "Hayýr Sýfýrlama" ) == 1 then 
+say ( "Baþarýlý." ) 
+pc . setqf ( "cooldown" , 0 ) 
+wait ( ) 
+end 
+else 
+return 
+end 
+end 
+end 
+say ( "Yolculuðuna þimdi Meley'i[ENTER]takip ederek baþlamak ister misin??" ) 
+if select ( "evet" , "hayýr" ) == 1 then 
+if pc . is_mount ( ) then 
+say ( "Gemide bineklere izin verilmez. Gemiye binmeden[ENTER]önce Binekten in." ) 
+return 
+end 
+if ship_defense_mgr . is_created ( ) or ship_defense_mgr . is_running ( ) then 
+ship_defense_mgr . join ( ) 
+return 
+end 
+local remove_ticket = false 
+if ship_defense . check_requirements ( remove_ticket ) then 
+ship_defense_mgr . create ( ) 
+end 
+end 

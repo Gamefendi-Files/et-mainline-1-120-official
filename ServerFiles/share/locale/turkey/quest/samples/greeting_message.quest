@@ -1,0 +1,15 @@
+--[[ martysama0134 - sample GREETING_MESSAGE from quest
+	NOTES:
+		-) This is a better alternative for player.string GREET message
+]]
+quest greeting_message begin
+	state start begin
+		when login begin
+			if is_test_server() then
+				syschat("Welcome to the Test Server!")
+			else
+				syschat("Welcome to the Live Server!")
+			end
+		end
+	end
+end

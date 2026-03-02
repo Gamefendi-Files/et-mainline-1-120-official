@@ -1,0 +1,65 @@
+if get_time ( ) < pc . getqf ( "duration" ) then 
+say_title ( mob_name ( 20091 ) ) 
+say ( gameforge . collect_quest_lv96 . msg10 ) 
+say ( "" ) 
+return 
+end 
+if pc . count_item ( 30253 ) <= 0 then 
+say_title ( mob_name ( 20091 ) ) 
+say ( string . format ( gameforge . collect_quest_lv96 . msg11 , item_name ( 30253 ) ) ) 
+return 
+end 
+say_title ( mob_name ( 20091 ) ) 
+say ( gameforge . collect_quest_lv96 . msg15 ) 
+say ( "" ) 
+pc . remove_item ( 30253 , 1 ) 
+if is_test_server ( ) then 
+pc . setqf ( "duration" , get_time ( ) + 2 ) 
+else 
+pc . setqf ( "duration" , get_time ( ) + 60 * 60 * 6 ) 
+end 
+wait ( ) 
+local pass_percent 
+if pc . getqf ( "drink_drug" ) == 0 then 
+pass_percent = 10 
+else 
+pass_percent = 60 
+end 
+local s = number ( 1 , 100 ) 
+if s <= pass_percent then 
+if pc . getqf ( "collect_count" ) < 9 then 
+local index = pc . getqf ( "collect_count" ) + 1 
+pc . setqf ( "collect_count" , index ) 
+say_title ( mob_name ( 20091 ) ) 
+say ( string . format ( gameforge . collect_quest_lv96 . msg12 , 10 - pc . getqf ( "collect_count" ) ) ) 
+say ( "" ) 
+pc . setqf ( "drink_drug" , 0 ) 
+return 
+end 
+say_title ( mob_name ( 20091 ) ) 
+say ( gameforge . collect_quest_lv96 . msg13 ) 
+pc . setqf ( "collect_count" , 10 ) 
+local s = select ( gameforge . collect_quest_lv96 . bonus1 , gameforge . collect_quest_lv96 . bonus2 , gameforge . collect_quest_lv96 . bonus3 ) 
+if 1 == s then 
+affect . add_collect ( 1 , 2000 , 60 * 60 * 24 * 365 * 60 ) 
+pc . setqf ( "reward" , 1 ) 
+elseif 2 == s then 
+affect . add_collect ( apply . DEF_GRADE_BONUS , 700 , 60 * 60 * 24 * 365 * 60 ) 
+pc . setqf ( "reward" , 2 ) 
+else 
+affect . add_collect ( apply . ATT_GRADE_BONUS , 300 , 60 * 60 * 24 * 365 * 60 ) 
+pc . setqf ( "reward" , 3 ) 
+end 
+pc . setqf ( "collect_count" , 0 ) 
+pc . setqf ( "drink_drug" , 0 ) 
+pc . setqf ( "duration" , 0 ) 
+clear_letter ( ) 
+set_state ( "__complete" ) 
+return 
+else 
+pc . setqf ( "drink_drug" , 0 ) 
+say_title ( mob_name ( 20091 ) ) 
+say ( gameforge . collect_quest_lv96 . msg14 ) 
+say ( "" ) 
+return 
+end 

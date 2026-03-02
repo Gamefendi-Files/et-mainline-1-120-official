@@ -1,0 +1,34 @@
+﻿  lapi.c
+  lcode.c
+  ldebug.c
+  ldo.c
+  ldump.c
+  lfunc.c
+  lgc.c
+  lauxlib.c
+  lbaselib.c
+  ldblib.c
+  liolib.c
+  lmathlib.c
+  loadlib.c
+  lstrlib.c
+  ltablib.c
+  llex.c
+  lmem.c
+  lobject.c
+  lopcodes.c
+  lparser.c
+  Generating Code...
+  Compiling...
+  lstate.c
+  lstring.c
+  ltable.c
+  ltests.c
+  ltm.c
+  lundump.c
+  lvm.c
+  lzio.c
+  Generating Code...
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1554,5): warning MSB8012: TargetPath(C:\Users\Furkan\Desktop\mainline_updated\ServerSource\liblua\lib\liblua.lib) does not match the Library's OutputFile property value (C:\Users\Furkan\Desktop\mainline_updated\ServerSource\liblua\lib\liblua_d.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1556,5): warning MSB8012: TargetName(liblua) does not match the Library's OutputFile property value (liblua_d). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+  liblua.2008.vcxproj -> C:\Users\Furkan\Desktop\mainline_updated\ServerSource\liblua\lib\liblua.lib

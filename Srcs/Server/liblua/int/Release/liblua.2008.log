@@ -1,0 +1,32 @@
+﻿  lapi.c
+  lcode.c
+  ldebug.c
+  ldo.c
+  ldump.c
+  lfunc.c
+  lgc.c
+  lauxlib.c
+  lbaselib.c
+  ldblib.c
+  liolib.c
+  lmathlib.c
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\liblua\src\lib\liolib.c(681,27): warning C4244: 'argument': conversion from 'time_t' to 'lua_Number', possible loss of data
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\liblua\src\lib\liolib.c(698,25): warning C4244: 'argument': conversion from 'time_t' to 'lua_Number', possible loss of data
+  loadlib.c
+  lstrlib.c
+  ltablib.c
+  llex.c
+  lmem.c
+  lobject.c
+  lopcodes.c
+  lparser.c
+  Compiling...
+  lstate.c
+  lstring.c
+  ltable.c
+  ltests.c
+  ltm.c
+  lundump.c
+  lvm.c
+  lzio.c
+  liblua.2008.vcxproj -> C:\Users\Furkan\Desktop\mainline_updated\ServerSource\liblua\lib\liblua.lib

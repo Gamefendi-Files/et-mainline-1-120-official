@@ -1,0 +1,73 @@
+# Stiglitz -  Gamefendi.com
+
+#Geçici olarak pack'i yüklemeyelim...
+Client/pack
+Database
+
+
+# -------------------------------------------------
+# Client icindeki gereksizleri bir halledelim.
+
+# Log Ve Syserr
+Client/syserr.txt
+Client/errorlog.txt
+Client/log.txt
+
+# Derlenmiş client'ler de gitsin.
+Client/Metin2*.exe
+
+# Pack'ı unutmadık canım
+# Bütün Klasörleri silelim
+
+#Client/pack/*/
+
+# Silmemen gerekenler de var tatlım.
+#!Client/pack/*.eix
+#!Client/pack/*.epk
+#!Client/pack/Index
+
+# Screenshotlar da kalmasın
+Client/screenshot/*
+
+# -------------------------------------------------
+# Source içindekileri halledelim.
+
+# Client Source
+
+Srcs/Client/.vs
+Srcs/Client/binary/*
+Srcs/Client/vs_files/*/Debug
+Srcs/Client/vs_files/*/Release
+Srcs/Client/vs_files/*/Distribute
+
+# Server Source
+
+Srcs/Server/Bin
+Srcs/Server/db/src/.obj
+Srcs/Server/game/src/.obj
+Srcs/Server/libgame/src/*.o
+Srcs/Server/liblua/src/*.o
+Srcs/Server/libpoly/*.o
+Srcs/Server/libpoly/Debug
+Srcs/Server/libpoly/Release
+Srcs/Server/libsq/*.o
+Srcs/Server/libsq/Debug
+Srcs/Server/libsq/Release
+Srcs/Server/libthecore/src/*.o
+
+# Dump Proto Source
+Tools/DumpProto/Release
+Tools/DumpProto/Debug
+
+
+# -------------------------------------------------
+# ServerFiles içindekileri halledelim.
+
+Server/Logs/*
+Server/**/syserr
+Server/**/syslog
+Server/**/pid
+Server/**/packet_info.txt
+Server/**/VERSION
+Server/share/bin/game
+Server/share/bin/db

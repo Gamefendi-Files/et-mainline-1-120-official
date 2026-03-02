@@ -1,0 +1,37 @@
+﻿  AsyncSQL.cpp
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libsql\AsyncSQL.h(65,38): warning C4244: '=': conversion from 'my_ulonglong' to 'uint32_t', possible loss of data
+  (compiling source file 'AsyncSQL.cpp')
+  
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libsql\AsyncSQL.h(66,46): warning C4244: '=': conversion from 'my_ulonglong' to 'uint32_t', possible loss of data
+  (compiling source file 'AsyncSQL.cpp')
+  
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libsql\AsyncSQL.h(70,37): warning C4244: '=': conversion from 'my_ulonglong' to 'uint32_t', possible loss of data
+  (compiling source file 'AsyncSQL.cpp')
+  
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libsql\AsyncSQL.cpp(268,3): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Semaphore.cpp
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libsql\AsyncSQL.h(65,38): warning C4244: '=': conversion from 'my_ulonglong' to 'uint32_t', possible loss of data
+  (compiling source file 'Semaphore.cpp')
+  
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libsql\AsyncSQL.h(66,46): warning C4244: '=': conversion from 'my_ulonglong' to 'uint32_t', possible loss of data
+  (compiling source file 'Semaphore.cpp')
+  
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libsql\AsyncSQL.h(70,37): warning C4244: '=': conversion from 'my_ulonglong' to 'uint32_t', possible loss of data
+  (compiling source file 'Semaphore.cpp')
+  
+  Statement.cpp
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libsql\AsyncSQL.h(65,38): warning C4244: '=': conversion from 'my_ulonglong' to 'uint32_t', possible loss of data
+  (compiling source file 'Statement.cpp')
+  
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libsql\AsyncSQL.h(66,46): warning C4244: '=': conversion from 'my_ulonglong' to 'uint32_t', possible loss of data
+  (compiling source file 'Statement.cpp')
+  
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libsql\AsyncSQL.h(70,37): warning C4244: '=': conversion from 'my_ulonglong' to 'uint32_t', possible loss of data
+  (compiling source file 'Statement.cpp')
+  
+C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libsql\Statement.cpp(151,29): warning C4244: '=': conversion from 'my_ulonglong' to 'int', possible loss of data
+  Tellwait.cpp
+  Generating Code...
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1554,5): warning MSB8012: TargetPath(C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libsql\libsql.lib) does not match the Library's OutputFile property value (C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libsql\libsql_d.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1556,5): warning MSB8012: TargetName(libsql) does not match the Library's OutputFile property value (libsql_d). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+  libsql.2008.vcxproj -> C:\Users\Furkan\Desktop\mainline_updated\ServerSource\libsql\libsql.lib

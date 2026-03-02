@@ -1,0 +1,89 @@
+define ENABLE_SAY false
+quest give_basic_weapon begin
+	state start begin
+		when login begin
+			if pc.getqf("basic_weapon") != 0 then -- old version support
+				return
+			end
+
+			if ENABLE_SAY then
+				say(gameforge.welcome.welcome_msg01)
+				-- wait()
+			else
+				syschat(gameforge.welcome.welcome_msg01)
+			end
+
+			-- a table of items for each job, with vnum and count
+			local itemJob = {
+				[WARRIOR] = {
+					{19, 1}, -- Sword+9
+					{3009, 1}, -- Glaive+9
+					{11209, 1}, -- Monk Plate Armour+9
+					{12209, 1}, -- Traditional Helmet+9
+				},
+				[NINJA] = {
+					{1009, 1}, -- Dagger+9
+					{2009, 1}, -- Bow+9
+					{11409, 1}, -- Azure Suit+9
+					{12349, 1}, -- Leather Hood+9
+				},
+				[SURA] = {
+					{19, 1}, -- Sword+9
+					{11609, 1}, -- Requiem Plate Armour+9
+					{12489, 1}, -- Bloody Helmet+9
+				},
+				[SHAMAN] = {
+					{5009, 1}, -- Copper Bell+9
+					{7009, 1}, -- Fan+9
+					{11809, 1}, -- Crimson Clothing+9
+					{12629, 1}, -- Monk Hat+9
+				},
+				[WOLFMAN] = {
+					{6009, 1}, -- Steel Torch+9
+					{21009, 1}, -- Divine Wind Armour+9
+					{21509, 1}, -- Skeleton Helmet+9
+				}
+			}
+
+			-- a table of general items, with vnum and count
+			local itemGeneral = {
+				{72723, 1}, -- Sun Elixir (S)
+				{72727, 1}, -- Moon Elixir (S)
+				{39006, 1}, -- Bravery Cape
+				{72702, 1}, -- Wind Shoes+ (tradeable)
+				{13009, 1}, -- Battle Shield+9
+				{14009, 1}, -- Wooden Bracelet+9
+				{15009, 1}, -- Leather Shoes+9
+				{16009, 1}, -- Wooden Necklace+9
+				{17009, 1}, -- Wooden Earrings+9
+			}
+
+			-- give the job-specific items to the character
+			for _, elem in ipairs(itemJob[pc.job]) do
+				pc.give_item2(elem[1], elem[2])
+			end
+
+			-- give the general items to the character
+			for _, elem in ipairs(itemGeneral) do
+				pc.give_item2(elem[1], elem[2])
+			end
+
+			-- set the horse level to 11 if it's below that
+			if horse.get_level() < 11 then
+				horse.set_level(11)
+			end
+
+			-- set the player level to 5 if it's below that
+			if pc.get_level() < 5 then
+				pc.set_level(5)
+			end
+
+			pc.setqf("basic_weapon", 1)
+			set_state(__COMPLETE__)
+		end
+	end
+	state __COMPLETE__ begin
+	end
+end
+
+

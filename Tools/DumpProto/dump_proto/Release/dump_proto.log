@@ -1,0 +1,15 @@
+﻿  ItemCSVReader.cpp
+D:\mainline_updated-u10\Tools\DumpProto\dump_proto\ItemCSVReader.cpp(357,25): warning C4244: '=': 'float' - 'int' dönüşümü; veri kaybı olabilir
+D:\mainline_updated-u10\Tools\DumpProto\dump_proto\ItemCSVReader.cpp(387,25): warning C4244: '=': 'float' - 'int' dönüşümü; veri kaybı olabilir
+D:\mainline_updated-u10\Tools\DumpProto\dump_proto\ItemCSVReader.cpp(420,25): warning C4244: '=': 'float' - 'int' dönüşümü; veri kaybı olabilir
+D:\mainline_updated-u10\Tools\DumpProto\dump_proto\ItemCSVReader.cpp(455,25): warning C4244: '=': 'float' - 'int' dönüşümü; veri kaybı olabilir
+D:\mainline_updated-u10\Tools\DumpProto\dump_proto\ItemCSVReader.cpp(956,25): warning C4244: '=': 'float' - 'int' dönüşümü; veri kaybı olabilir
+D:\mainline_updated-u10\Tools\DumpProto\dump_proto\ItemCSVReader.cpp(1000,25): warning C4244: '=': 'float' - 'int' dönüşümü; veri kaybı olabilir
+D:\mainline_updated-u10\Tools\DumpProto\dump_proto\ItemCSVReader.cpp(1032,25): warning C4244: '=': 'float' - 'int' dönüşümü; veri kaybı olabilir
+MSVCRT.lib(initializers.obj) : warning LNK4098: defaultlib 'libcmt.lib' diğer kitaplıkların kullanımı ile çakışıyor; /NODEFAULTLIB:library kullanın
+  Kod üretiliyor
+  2 of 982 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    3 functions had inline decision re-evaluated but remain unchanged
+  Kodun üretilmesi tamamlandı
+  dump_proto.vcxproj -> D:\mainline_updated-u10\Tools\DumpProto\Release\dump_proto.exe

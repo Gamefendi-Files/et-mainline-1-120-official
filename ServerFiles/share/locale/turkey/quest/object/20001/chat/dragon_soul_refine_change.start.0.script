@@ -1,0 +1,4 @@
+say_title ( mob_name ( 20001 ) ) 
+if select ( "Evet" , "Hayýr" ) == 1 then 
+ds . open_attr_change_window ( ) 
+else return end 

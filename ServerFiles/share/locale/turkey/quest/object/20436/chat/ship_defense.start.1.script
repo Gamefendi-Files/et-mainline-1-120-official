@@ -1,0 +1,8 @@
+if ship_defense_mgr . is_running ( ) then 
+say ( "Köyüne dönmek ister misin?" ) 
+else 
+say ( "Şimdi gemiyi terk etmek istiyor musun?" ) 
+end 
+if select ( "evet" , "hayır" ) == 1 then 
+ship_defense_mgr . leave ( ) 
+end 

@@ -1,0 +1,40 @@
+Group ShopNPC
+{
+	#--#	NPC	Group
+	1	9010	A01
+	2	9010	A02
+	3	9010	A03
+}
+
+Group A01
+{
+	Vnum	90001
+	Name	Potions
+	CoinType	Gold
+	Group Items
+	{
+		#--#	Vnum	Count	Price
+	}
+}
+
+Group A02
+{
+	Vnum	90002
+	Name	Specials
+	CoinType	Gold
+	Group Items
+	{
+		#--#	Vnum	Count	Price
+	}
+}
+
+Group A03
+{
+	Vnum	90003
+	Name	Fishes
+	CoinType	Gold
+	Group Items
+	{
+		#--#	Vnum	Count	Price
+	}
+}

@@ -1,0 +1,5 @@
+say_title ( mob_name ( 60003 ) .. ":" ) 
+say ( "Auraný dönüþtürmek ister misin?[ENTER]" ) 
+if select ( locale . yes , locale . no ) == 2 then return end 
+setskin ( NOWINDOW ) 
+game . open_aura_evolve_window ( ) 

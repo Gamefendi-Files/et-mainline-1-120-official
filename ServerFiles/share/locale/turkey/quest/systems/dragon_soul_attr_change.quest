@@ -1,0 +1,10 @@
+quest dragon_soul_refine_change begin
+	state start begin
+		when 20001.chat."Mitsi Simya Bonus Deðiþtirme Sistemi" with ds.is_qualified() != 0 begin
+			say_title(mob_name(20001))
+			if select("Evet", "Hayýr") == 1 then
+				ds.open_attr_change_window()
+			else return end
+		end
+	end
+end

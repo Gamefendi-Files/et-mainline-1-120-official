@@ -1,0 +1,6 @@
+say_title ( "Bir şampiyon olmak " ) 
+say ( "Savaşçı Heykeli seni görmek istiyor. " ) 
+say ( "Onu ziyaret etsen iyi olabilir. " ) 
+say ( "Kendisini Liman şehrinde bulabilirsin. " ) 
+say ( "" ) 
+say_reward ( "Mini Harita'daki yanıp sönen noktayı takip et. " ) 

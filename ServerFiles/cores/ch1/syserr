@@ -1,0 +1,26 @@
+SYSERR: Dec 22 04:00:36.293875 :: pid_init: 
+Start of pid: 2094
+
+SYSERR: Dec 22 04:00:36.296081 :: socket_connect: HOST 192.168.1.105:15900, could not connect.
+SYSERR: Dec 22 04:00:41.875140 :: socket_connect: HOST 192.168.1.105:15900, could not connect.
+SYSERR: Dec 22 04:03:55.806002 :: heart_idle: losing 189 seconds. (lag occured)
+SYSERR: Dec 22 04:05:07.956240 :: Click: CQuestManager::Click(pid=10032, target_npc_name=None - Manni) - NOT EXIST NPC RACE VNUM[20246]
+SYSERR: Dec 22 04:05:11.301041 :: GetMoveMotionSpeed: cannot find motion (name None - Manni race 20246 mode 0)
+SYSERR: Dec 22 04:06:22.94796 :: GetMoveMotionSpeed: cannot find motion (name None - Manni race 20246 mode 0)
+SYSERR: Dec 22 04:06:23.54995 :: GetMoveMotionSpeed: cannot find motion (name None - Manni race 20246 mode 0)
+SYSERR: Dec 22 04:06:23.536171 :: GetMoveMotionSpeed: cannot find motion (name None - Manni race 20246 mode 0)
+SYSERR: Dec 22 04:06:24.17212 :: GetMoveMotionSpeed: cannot find motion (name None - Manni race 20246 mode 0)
+SYSERR: Dec 22 04:06:24.494122 :: GetMoveMotionSpeed: cannot find motion (name None - Manni race 20246 mode 0)
+SYSERR: Dec 22 04:06:25.897348 :: GetMoveMotionSpeed: cannot find motion (name None - Manni race 20246 mode 0)
+SYSERR: Dec 22 04:08:20.997472 :: GetMoveMotionSpeed: cannot find motion (name None - Manni race 20246 mode 0)
+SYSERR: Dec 22 04:08:21.476085 :: GetMoveMotionSpeed: cannot find motion (name None - Manni race 20246 mode 0)
+SYSERR: Dec 22 04:08:21.955111 :: GetMoveMotionSpeed: cannot find motion (name None - Manni race 20246 mode 0)
+SYSERR: Dec 22 04:08:22.435168 :: GetMoveMotionSpeed: cannot find motion (name None - Manni race 20246 mode 0)
+SYSERR: Dec 22 04:08:22.913429 :: GetMoveMotionSpeed: cannot find motion (name None - Manni race 20246 mode 0)
+SYSERR: Dec 22 04:08:23.395297 :: GetMoveMotionSpeed: cannot find motion (name None - Manni race 20246 mode 0)
+SYSERR: Dec 22 04:08:23.875076 :: GetMoveMotionSpeed: cannot find motion (name None - Manni race 20246 mode 0)
+SYSERR: Dec 22 04:08:24.354905 :: GetMoveMotionSpeed: cannot find motion (name None - Manni race 20246 mode 0)
+SYSERR: Dec 22 04:08:24.836619 :: GetMoveMotionSpeed: cannot find motion (name None - Manni race 20246 mode 0)
+SYSERR: Dec 22 04:08:25.340503 :: GetMoveMotionSpeed: cannot find motion (name None - Manni race 20246 mode 0)
+SYSERR: Dec 22 04:08:25.782902 :: GetMoveMotionSpeed: cannot find motion (name None - Manni race 20246 mode 0)
+SYSERR: Dec 22 04:08:26.262965 :: GetMoveMotionSpeed: cannot find motion (name None - Manni race 20246 mode 0)

@@ -1,0 +1,12 @@
+SYSERR: Dec 22 03:31:32.328105 :: pid_init: 
+Start of pid: 2063
+
+SYSERR: Dec 22 03:31:32.330669 :: socket_connect: HOST 192.168.1.105:15900, could not connect.
+SYSERR: Dec 22 03:31:41.374865 :: socket_connect: HOST 192.168.1.105:15900, could not connect.
+SYSERR: Dec 22 03:31:44.11274 :: socket_connect: HOST 192.168.1.105:15900, could not connect.
+SYSERR: Dec 22 03:31:47.26984 :: socket_connect: HOST 192.168.1.105:15900, could not connect.
+SYSERR: Dec 22 03:36:50.973462 :: heart_idle: losing 298 seconds. (lag occured)
+SYSERR: Dec 22 03:57:54.485321 :: hupsig: SIGHUP, SIGINT, SIGTERM signal has been received. shutting down.
+SYSERR: Dec 22 03:58:45.136215 :: pid_deinit: 
+End of pid
+

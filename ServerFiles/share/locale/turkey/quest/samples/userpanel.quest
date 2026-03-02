@@ -1,0 +1,38 @@
+--[[ martysama0134 - sample USERPANEL from QUEST
+	NOTES:
+		-) The scroll is automatically resent after closing the menu
+		-) To disable the automatic resend, set RESEND_LETTER to false or 0
+]]
+define RESEND_LETTER true
+quest userpanel begin
+	state start begin
+
+		function ResendLetter(title)
+			set_skin(NOWINDOW)
+			makequestbutton(title)
+			q.set_title(title)
+			q.start()
+		end
+
+		function Message()
+			say("Are you sure about that?")
+			local s1=select("Yes", "No")
+			if s1==2 then return end
+			say("OKKKKKKKKKKK")
+			wait()
+			say("KEEP GOIINNNNNNNNNG")
+			wait() --required
+		end
+
+		when letter begin
+			send_letter("UserPanel")
+		end
+
+		when button or info begin
+			userpanel.Message()
+			if RESEND_LETTER or RESEND_LETTER==1 then
+				userpanel.ResendLetter("UserPanel")
+			end
+		end
+	end
+end
