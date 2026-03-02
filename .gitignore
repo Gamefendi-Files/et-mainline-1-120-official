@@ -71,3 +71,9 @@ Server/**/packet_info.txt
 Server/**/VERSION
 Server/share/bin/game
 Server/share/bin/db
+
+
+# -------------------------------------------------
+# Genel filtreleme yapalım.
+
+**.log
